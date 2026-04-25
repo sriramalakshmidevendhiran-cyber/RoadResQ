@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@keyframes moveAmbulance {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-150px);
+  }
+}
+
+.ambulance {
+  position: absolute;
+  font-size: 22px;
+  animation: moveAmbulance linear infinite;
+  white-space: nowrap;
+}
+
+/* First ambulance */
+.ambulance.a1 {
+  top: 8px;
+  animation-duration: 6s;
+}
+
+/* Second ambulance */
+.ambulance.a2 {
+  top: 30px;
+  animation-duration: 6s;
+  animation-delay: 3s; /* 👈 KEY FIX */
+}
